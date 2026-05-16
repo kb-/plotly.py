@@ -20,7 +20,7 @@
   "dependencies": {
     "@lumino/widgets": "~2.4.0",
     "lodash-es": "^4.17.21",
-    "plotly.js": "file:../../../code/plotly.js-pr-7127/plotly.js.tgz"
+    "plotly.js": "file:./vendor/plotly.js.tgz"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^4.3.6 || ^3.6.8",
