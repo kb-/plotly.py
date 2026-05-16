@@ -701,6 +701,9 @@ class Figure(BaseFigure):
         texttemplate=None,
         texttemplatefallback=None,
         texttemplatesrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -1003,6 +1006,45 @@ class Figure(BaseFigure):
         texttemplatesrc
             Sets the source reference on Chart Studio Cloud for
             `texttemplate`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available. Finally, the template string has access
+            to variables `value` and `label`.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -1212,6 +1254,9 @@ class Figure(BaseFigure):
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
             texttemplatesrc=texttemplatesrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -1663,6 +1708,9 @@ class Figure(BaseFigure):
         stream=None,
         text=None,
         textsrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -2035,6 +2083,44 @@ class Figure(BaseFigure):
         textsrc
             Sets the source reference on Chart Studio Cloud for
             `text`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -2269,6 +2355,9 @@ class Figure(BaseFigure):
             stream=stream,
             text=text,
             textsrc=textsrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -2339,6 +2428,9 @@ class Figure(BaseFigure):
         stream=None,
         text=None,
         textsrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         visible=None,
@@ -2546,6 +2638,44 @@ class Figure(BaseFigure):
         textsrc
             Sets the source reference on Chart Studio Cloud for
             `text`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -2707,6 +2837,9 @@ class Figure(BaseFigure):
             stream=stream,
             text=text,
             textsrc=textsrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             visible=visible,
@@ -4770,6 +4903,9 @@ class Figure(BaseFigure):
         textsrc=None,
         texttemplate=None,
         texttemplatefallback=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         transpose=None,
         uid=None,
         uirevision=None,
@@ -5054,6 +5190,44 @@ class Figure(BaseFigure):
             referenced in a template is missing. If the boolean
             value 'false' is passed in, the specifier with the
             missing variable will be displayed.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         transpose
             Transposes the z data.
         uid
@@ -5290,6 +5464,9 @@ class Figure(BaseFigure):
             textsrc=textsrc,
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             transpose=transpose,
             uid=uid,
             uirevision=uirevision,
@@ -6565,6 +6742,9 @@ class Figure(BaseFigure):
         texttemplate=None,
         texttemplatefallback=None,
         texttemplatesrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         visible=None,
@@ -6858,6 +7038,45 @@ class Figure(BaseFigure):
         texttemplatesrc
             Sets the source reference on Chart Studio Cloud for
             `texttemplate`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available. Finally, the template string has access
+            to variables `value` and `label`.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -7053,6 +7272,9 @@ class Figure(BaseFigure):
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
             texttemplatesrc=texttemplatesrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             visible=visible,
@@ -7505,6 +7727,9 @@ class Figure(BaseFigure):
         textsrc=None,
         texttemplate=None,
         texttemplatefallback=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         transpose=None,
         uid=None,
         uirevision=None,
@@ -7778,6 +8003,44 @@ class Figure(BaseFigure):
             referenced in a template is missing. If the boolean
             value 'false' is passed in, the specifier with the
             missing variable will be displayed.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         transpose
             Transposes the z data.
         uid
@@ -8015,6 +8278,9 @@ class Figure(BaseFigure):
             textsrc=textsrc,
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             transpose=transpose,
             uid=uid,
             uirevision=uirevision,
@@ -8107,6 +8373,9 @@ class Figure(BaseFigure):
         textsrc=None,
         texttemplate=None,
         texttemplatefallback=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -8429,6 +8698,45 @@ class Figure(BaseFigure):
             referenced in a template is missing. If the boolean
             value 'false' is passed in, the specifier with the
             missing variable will be displayed.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available. Finally, the template string has access
+            to variable `binNumber`
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -8599,6 +8907,9 @@ class Figure(BaseFigure):
             textsrc=textsrc,
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -8660,6 +8971,9 @@ class Figure(BaseFigure):
         textfont=None,
         texttemplate=None,
         texttemplatefallback=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         visible=None,
@@ -8949,6 +9263,45 @@ class Figure(BaseFigure):
             referenced in a template is missing. If the boolean
             value 'false' is passed in, the specifier with the
             missing variable will be displayed.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available. Finally, the template string has access
+            to variable `z`
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -9147,6 +9500,9 @@ class Figure(BaseFigure):
             textfont=textfont,
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             visible=visible,
@@ -9222,6 +9578,9 @@ class Figure(BaseFigure):
         textfont=None,
         texttemplate=None,
         texttemplatefallback=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         visible=None,
@@ -9527,6 +9886,45 @@ class Figure(BaseFigure):
             referenced in a template is missing. If the boolean
             value 'false' is passed in, the specifier with the
             missing variable will be displayed.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available. Finally, the template string has access
+            to variable `z`
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -9723,6 +10121,9 @@ class Figure(BaseFigure):
             textfont=textfont,
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             visible=visible,
@@ -11816,6 +12217,9 @@ class Figure(BaseFigure):
         text=None,
         textsrc=None,
         tickwidth=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         visible=None,
@@ -12025,6 +12429,44 @@ class Figure(BaseFigure):
         tickwidth
             Sets the width of the open/close tick marks relative to
             the "x" minimal interval.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -12183,6 +12625,9 @@ class Figure(BaseFigure):
             text=text,
             textsrc=textsrc,
             tickwidth=tickwidth,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             visible=visible,
@@ -12671,6 +13116,7 @@ class Figure(BaseFigure):
         legendgroup=None,
         legendgrouptitle=None,
         legendrank=None,
+        legendranksrc=None,
         legendsrc=None,
         legendwidth=None,
         marker=None,
@@ -12850,16 +13296,20 @@ class Figure(BaseFigure):
             :class:`plotly.graph_objects.pie.Legendgrouptitle`
             instance or dict with compatible properties
         legendrank
-            Sets the legend rank for this trace. Items and groups
-            with smaller ranks are presented on top/left side while
-            with "reversed" `legend.traceorder` they are on
-            bottom/right side. The default legendrank is 1000, so
-            that you can use ranks less than 1000 to place certain
-            items before all unranked items, and ranks greater than
-            1000 to go after all unranked items. When having
-            unranked or equal rank items shapes would be displayed
-            after traces i.e. according to their order in data and
-            layout.
+            Sets the legend rank for this pie. If passed as an
+            array, this will set the legend rank of the individual
+            pie slices. Items and groups with smaller ranks are
+            presented on top/left side while with "reversed"
+            `legend.traceorder` they are on bottom/right side. The
+            default legendrank is 1000, so that you can use ranks
+            less than 1000 to place certain items before all
+            unranked items, and ranks greater than 1000 to go after
+            all unranked items. When having unranked or equal rank
+            items shapes would be displayed after traces i.e.
+            according to their order in data and layout.
+        legendranksrc
+            Sets the source reference on Chart Studio Cloud for
+            `legendrank`.
         legendsrc
             Sets the source reference on Chart Studio Cloud for
             `legend`.
@@ -13052,6 +13502,7 @@ class Figure(BaseFigure):
             legendgroup=legendgroup,
             legendgrouptitle=legendgrouptitle,
             legendrank=legendrank,
+            legendranksrc=legendranksrc,
             legendsrc=legendsrc,
             legendwidth=legendwidth,
             marker=marker,
@@ -13364,6 +13815,9 @@ class Figure(BaseFigure):
         texttemplate=None,
         texttemplatefallback=None,
         texttemplatesrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -13719,6 +14173,44 @@ class Figure(BaseFigure):
         texttemplatesrc
             Sets the source reference on Chart Studio Cloud for
             `texttemplate`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -13925,6 +14417,9 @@ class Figure(BaseFigure):
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
             texttemplatesrc=texttemplatesrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -14460,6 +14955,9 @@ class Figure(BaseFigure):
         texttemplate=None,
         texttemplatefallback=None,
         texttemplatesrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -14721,6 +15219,44 @@ class Figure(BaseFigure):
         texttemplatesrc
             Sets the source reference on Chart Studio Cloud for
             `texttemplate`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -14839,6 +15375,9 @@ class Figure(BaseFigure):
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
             texttemplatesrc=texttemplatesrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -15334,6 +15873,9 @@ class Figure(BaseFigure):
         texttemplate=None,
         texttemplatefallback=None,
         texttemplatesrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -15609,6 +16151,44 @@ class Figure(BaseFigure):
         texttemplatesrc
             Sets the source reference on Chart Studio Cloud for
             `texttemplate`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -15800,6 +16380,9 @@ class Figure(BaseFigure):
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
             texttemplatesrc=texttemplatesrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -18433,6 +19016,9 @@ class Figure(BaseFigure):
         stream=None,
         text=None,
         textsrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -18625,6 +19211,44 @@ class Figure(BaseFigure):
         textsrc
             Sets the source reference on Chart Studio Cloud for
             `text`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -18748,6 +19372,9 @@ class Figure(BaseFigure):
             stream=stream,
             text=text,
             textsrc=textsrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -20820,6 +21447,9 @@ class Figure(BaseFigure):
         stream=None,
         text=None,
         textsrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         uid=None,
         uirevision=None,
         unselected=None,
@@ -21111,6 +21741,44 @@ class Figure(BaseFigure):
         textsrc
             Sets the source reference on Chart Studio Cloud for
             `text`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         uid
             Assign an id to this trace, Use this to provide object
             constancy between traces during animations and
@@ -21281,6 +21949,9 @@ class Figure(BaseFigure):
             stream=stream,
             text=text,
             textsrc=textsrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             uid=uid,
             uirevision=uirevision,
             unselected=unselected,
@@ -21852,6 +22523,9 @@ class Figure(BaseFigure):
         texttemplate=None,
         texttemplatefallback=None,
         texttemplatesrc=None,
+        tooltip=None,
+        tooltiptemplate=None,
+        tooltiptemplatesrc=None,
         totals=None,
         uid=None,
         uirevision=None,
@@ -22160,6 +22834,45 @@ class Figure(BaseFigure):
         texttemplatesrc
             Sets the source reference on Chart Studio Cloud for
             `texttemplate`.
+        tooltip
+            Accepts any properties typically used in annotations.
+            This flexible structure allows for customization
+            according to specific needs.
+        tooltiptemplate
+            Template string used for rendering the information that
+            appear on tooltip box. The parameters and syntax are
+            the same than for hovertemplate. Note that this will
+            override `tooltipinfo`. Variables are inserted using
+            %{variable}, for example "y: %{y}" as well as
+            %{xother}, {%_xother}, {%_xother_}, {%xother_}. When
+            showing info for several points, "xother" will be added
+            to those with different x positions from the first
+            point. An underscore before or after "(x|y)other" will
+            add a space on that side, only when this field is
+            shown. Numbers are formatted using d3-format's syntax
+            %{variable:d3-format}, for example "Price: %{y:$.2f}".
+            https://github.com/d3/d3-format/tree/v1.4.5#d3-format
+            for details on the formatting syntax. Dates are
+            formatted using d3-time-format's syntax
+            %{variable|d3-time-format}, for example "Day:
+            %{2019-01-01|%A}". https://github.com/d3/d3-time-
+            format/tree/v2.2.3#locale_format for details on the
+            date formatting syntax. Variables that can't be found
+            will be replaced with the specifier. For example, a
+            template of "data: %{x}, %{y}" will result in a value
+            of "data: 1, %{y}" if x is 1 and y is missing.
+            Variables with an undefined value will be replaced with
+            the fallback value. The variables available in
+            `tooltiptemplate` are the ones emitted as event data
+            described at this link
+            https://plotly.com/javascript/plotlyjs-events/#event-
+            data. Additionally, all attributes that can be
+            specified per-point (the ones that are `arrayOk: true`)
+            are available. Finally, the template string has access
+            to variables `initial`, `delta` and `final`.
+        tooltiptemplatesrc
+            Sets the source reference on Chart Studio Cloud for
+            `tooltiptemplate`.
         totals
             :class:`plotly.graph_objects.waterfall.Totals` instance
             or dict with compatible properties
@@ -22366,6 +23079,9 @@ class Figure(BaseFigure):
             texttemplate=texttemplate,
             texttemplatefallback=texttemplatefallback,
             texttemplatesrc=texttemplatesrc,
+            tooltip=tooltip,
+            tooltiptemplate=tooltiptemplate,
+            tooltiptemplatesrc=tooltiptemplatesrc,
             totals=totals,
             uid=uid,
             uirevision=uirevision,

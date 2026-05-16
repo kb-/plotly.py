@@ -18,9 +18,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@lumino/widgets": "~2.4.0",
     "lodash-es": "^4.17.21",
-    "plotly.js": "3.5.0",
-    "@lumino/widgets": "~2.4.0"
+    "plotly.js": "file:../../../code/plotly.js-pr-7127/plotly.js.tgz"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^4.3.6 || ^3.6.8",

@@ -50,8 +50,8 @@ class Modebar(_BaseLayoutHierarchyType):
         that these buttons will only be shown if they are compatible
         with all trace types used in a graph. Similar to
         `config.modeBarButtonsToAdd` option. This may include
-        "v1hovermode", "hoverclosest", "hovercompare", "togglehover",
-        "togglespikelines", "drawline", "drawopenpath",
+        "tooltip", "v1hovermode", "hoverclosest", "hovercompare",
+        "togglehover", "togglespikelines", "drawline", "drawopenpath",
         "drawclosedpath", "drawcircle", "drawrect", "eraseshape".
 
         The 'add' property is a string and must be specified as:
@@ -234,10 +234,11 @@ class Modebar(_BaseLayoutHierarchyType):
             Please note that these buttons will only be shown if
             they are compatible with all trace types used in a
             graph. Similar to `config.modeBarButtonsToAdd` option.
-            This may include "v1hovermode", "hoverclosest",
-            "hovercompare", "togglehover", "togglespikelines",
-            "drawline", "drawopenpath", "drawclosedpath",
-            "drawcircle", "drawrect", "eraseshape".
+            This may include "tooltip", "v1hovermode",
+            "hoverclosest", "hovercompare", "togglehover",
+            "togglespikelines", "drawline", "drawopenpath",
+            "drawclosedpath", "drawcircle", "drawrect",
+            "eraseshape".
         addsrc
             Sets the source reference on Chart Studio Cloud for
             `add`.
@@ -308,10 +309,11 @@ class Modebar(_BaseLayoutHierarchyType):
             Please note that these buttons will only be shown if
             they are compatible with all trace types used in a
             graph. Similar to `config.modeBarButtonsToAdd` option.
-            This may include "v1hovermode", "hoverclosest",
-            "hovercompare", "togglehover", "togglespikelines",
-            "drawline", "drawopenpath", "drawclosedpath",
-            "drawcircle", "drawrect", "eraseshape".
+            This may include "tooltip", "v1hovermode",
+            "hoverclosest", "hovercompare", "togglehover",
+            "togglespikelines", "drawline", "drawopenpath",
+            "drawclosedpath", "drawcircle", "drawrect",
+            "eraseshape".
         addsrc
             Sets the source reference on Chart Studio Cloud for
             `add`.

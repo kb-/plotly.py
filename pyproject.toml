@@ -35,8 +35,9 @@ license = "MIT"
 license-files = ["LICENSE.txt"]
 version = "6.7.0"
 dependencies = [
+    "jupyter>=1.1.1",
     "narwhals>=1.15.1",
-    "packaging"
+    "packaging",
 ]
 
 [project.optional-dependencies]
